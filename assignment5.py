@@ -116,3 +116,46 @@ print(d2)
 #{'a': 1, 'b': 99}
 #{'a': 1, 'b': 99} we updated the value of b to 99
 
+# Sets
+
+#Duplicates + unordered 
+s = {"apple", "banana", "apple", "cherry"} 
+print(s) 
+# Output:
+# {'apple', 'banana', 'cherry'} sets only keep unique values, order does not matter
+
+#Membership + looping 
+animals = {"dog", "cat", "bird"} 
+if "cat" in animals:
+    print ("Yes, cat is in the set.")
+else:
+    print("No, cat is not in the set.")  
+
+#add() vs update() 
+ 
+s = {"a", "b"}
+s.add("c")
+s.update(["d", "e"]) 
+print(s)
+# output: {'c', 'e', 'a', 'b', 'd'}
+
+#remove() vs discard()  
+s = {"x", "y"} 
+#s.remove("z")   # case A does not exist in the set
+#s.discard("z")  # case B Error
+
+#Set operations 
+A = {1, 2, 3, 4} 
+B = {3, 4, 5} 
+print(A.union(B)) 
+print(A.intersection(B)) 
+print(A.difference(B)) 
+print(A.symmetric_difference(B)) 
+# Output:
+# {'d', 'e', 'a', 'c', 'b'}
+# {1, 2, 3, 4, 5}
+# {3, 4}
+# {1, 2}
+# {1, 2, 5}
+
+
