@@ -78,3 +78,41 @@ print(c) #collect the remaining values into a list
 # 20
 # [30, 40, 50]
 
+#Dictionary
+
+#Keys vs Values
+person = {"name": "Mina", "age": 26, "city": "SLC"} 
+print(person)
+# keys: name, age, city
+# values: Mina, 26, SLC
+
+#Access: [] vs get() 
+d = {"a": 1} 
+print(d["a"]) 
+print(d.get("b")) 
+#Why is get() useful? Prevent Error when the key may not exist. 
+#output: 
+# 1
+# None
+
+#Update or add 
+student = {"name": "Lina", "score": 90} 
+student.update({"score": 95, "passed": True}) 
+print(student)
+#output: {'name': 'Lina', 'score': 95, 'passed': True}
+
+#Duplicate keys 
+d = {"x": 1, "x": 2, "x": 3} 
+print(d) 
+# output: {'x': 3} python keeps the last value
+
+#Copy vs reference  
+d1 = {"a": 1, "b": 2} 
+d2 = d1 
+d2["b"] = 99 
+print(d1) 
+print(d2) 
+# output:
+#{'a': 1, 'b': 99}
+#{'a': 1, 'b': 99} we updated the value of b to 99
+
