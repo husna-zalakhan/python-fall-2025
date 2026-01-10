@@ -158,4 +158,58 @@ print(A.symmetric_difference(B))
 # {1, 2}
 # {1, 2, 5}
 
+# Bonus Questions
 
+# Nested List – Access & Update 
+numbers = [ 
+[10, 20, 30], 
+[40, 50, 60], 
+[70, 80, 90] 
+] 
+
+print(numbers[1][1]) # 50
+#Write one line of code to change 60 to 600. 
+numbers [1][2] =600 
+print(numbers) 
+# output:
+# [[10, 20, 30], [40, 50, 600], [70, 80, 90]]
+
+#Bonus 2: Nested Dictionary – Access & Update 
+student = { 
+"name": "Amina", 
+"scores": { 
+"math": 88, 
+"english": 92, 
+"science": 90 
+} 
+} 
+# Write code to print the English score. 
+print(student["scores"]["english"]) #92
+# Change the math score to 95. 
+student["scores"]["math"] = 95
+print(student)
+
+# Add a new subject "history" with score 89.
+student["scores"]["history"]= 89
+print(student)
+
+#Bonus 3) List of Dictionaries – Real-world Example 
+employees = [ 
+{"id": 1, "name": "Ali"}, 
+{"id": 2, "name": "Sara"}, 
+{"id": 3, "name": "Omar"} 
+] 
+# Print the name of the employee with id = 2.
+for emp in employees:
+    if emp["id"] == 2:
+        print(emp["name"])
+
+# Change "Omar" to "Omer". 
+for emp in employees:
+    if emp["name"] == "Omar":
+        emp["name"] = "Omer"
+        
+# Print the updated list.
+print(employees)
+# output
+#[{'id': 1, 'name': 'Ali'}, {'id': 2, 'name': 'Sara'}, {'id': 3, 'name': 'Omer'}]
