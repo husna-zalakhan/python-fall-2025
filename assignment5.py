@@ -35,6 +35,46 @@ b = a
 b.append(4) 
 print(a) 
 print(b) 
-#outcome: [1, 2, 3, 4]
+#outcome: 
 # [1, 2, 3, 4]
+# [1, 2, 3, 4]
+
+# Tuples
+t1 = ("apple") #F
+t2 = ("apple",) #T
+print(t1)
+print(t2)
+
+#Tuple indexing + slicing 
+t = ("a", "b", "c", "d", "e") 
+print(t[0]) 
+print(t[-1]) 
+print(t[1:4])
+#Output: 
+# a
+# e
+# ('b', 'c', 'd')
+
+t = (1, 2, 3) 
+#t[0] = 99 
+print(t) #Error
+
+t = ("a", "b", "c")
+temp = list(t)     # convert tuple to list
+temp[1] = "B"      # change value
+t = tuple(temp)    # convert back to tuple
+print(t)
+#output:
+#('a', 'B', 'c')
+
+#Unpacking with *
+t = (10, 20, 30, 40, 50) 
+a, b, *c = t 
+print(a) #first value
+print(b) #second value
+print(c) #collect the remaining values into a list
+#output: 
+# 10
+# 20
+# [30, 40, 50]
 
